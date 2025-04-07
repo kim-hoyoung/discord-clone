@@ -11,27 +11,60 @@ const MainDiv = styled.div`
   width: 250px;
   border-radius: 10px;
   position: fixed;
-  bottom: 20px; /* 화면 아래에서 20px 위로 띄움 */
-  left: 10px; /* 왼쪽 사이드바에서 약간 띄워서 위치 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 살짝 떠 있는 느낌 */
+  bottom: 20px;
+  left: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 `;
 
 const ProfileInfo = styled.div`
   display: flex;
   align-items: center;
+  position: relative;
 `;
 
-const ProfileIcon = styled.img`
-  width: 40px;
-  height: 40px;
+const ProfileIcon = styled.div`
+  position: relative;
+  width: 43px;
+  height: 43px;
   border-radius: 50%;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3ba55d;
+  img {
+    width: 26px;
+    height: 20px;
+  }
+`;
+
+const StatusIcon = styled.div`
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #3ba55d;
+  bottom: -2px;
+  right: -4px;
+  border: 4px solid var(--profilebar-bg-color); /* 테두리로 잘린 부분 보정 */
 `;
 
 const ProfileName = styled.div`
   display: flex;
   flex-direction: column;
   color: var(--normal-txt-color);
+  margin-left: 10px;
+
+  span:nth-child(1) {
+    font-size: 17px; /* 이름 글자 크기 */
+    color: #ffff;
+    font-weight: bold;
+  }
+
+  span:nth-child(2) {
+    font-size: 13px; /* 온라인 텍스트 크기 */
+    margin-top: 5px;
+    color: #b9bbbe;
+  }
 `;
 
 const Icons = styled.div`
@@ -45,7 +78,10 @@ export default function ProfileBar() {
   return (
     <MainDiv>
       <ProfileInfo>
-        <ProfileIcon src="./src/assets/images/discord.png" alt="Profile" />
+        <ProfileIcon>
+          <img src="./src/assets/images/discord-ProfileBar.png" alt="Profile" />
+          <StatusIcon />
+        </ProfileIcon>
         <ProfileName>
           <span>김호영</span>
           <span>온라인</span>
