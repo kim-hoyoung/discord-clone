@@ -80,7 +80,7 @@ export default function Message() {
               <img
                 className="profileIcon"
                 style={{ width: "40px", height: "30px" }}
-                src="./images/discord.png"
+                src="./src/assets/images/discord.png"
                 alt="Profile-icon"
               />
               <div className="messageData">

@@ -11,21 +11,19 @@ import ProfileBar from "../src/compoenets/profile-bar/ProfileBar";
 const MainDiv = styled.div`
   background-color: var(--main-bg-color);
   height: 100vh;
-  overflow: hidden;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 1fr auto; /* MainContent와 ProfileBar로 구분 */
 `;
 
+// MainContent 컴포넌트: 사이드바, 메인, 사용자 목록으로 나뉨
 const MainContent = styled.div`
   display: grid;
-  position: relative;
-  left: 4vw;
-  top: 4vh;
-  width: 96vw;
-  height: 96vh;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-top-left-radius: 20px;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 250px 1fr 250px; /* 사이드바, 메인, 사용자 목록 */
+  column-gap: 60px; /* 열 간격 추가 (채팅창을 오른쪽으로 밀기 위해) */
   box-sizing: border-box;
-  grid-template-columns: 1fr 3fr 1fr;
 `;
 
 function App() {
