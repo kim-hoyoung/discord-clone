@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaCrown } from "react-icons/fa";
-import discordIcon from "../../assets/images/discord-ProfileBar.png"; // 아이콘 이미지 가져오기
+import discordIcon from "../../../public/images/discord-ProfileBar.png"; // 아이콘 이미지 가져오기
 
 const MainDiv = styled.div`
   display: flex;

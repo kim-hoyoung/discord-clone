@@ -2,11 +2,11 @@ import "./reset.css";
 import "./App.css";
 import styled from "styled-components";
 import { useState } from "react";
-import SideChannelList from "../src/compoenets/side-channel-list/SideChannelList";
-import Message from "../src/compoenets/message/Message";
-import SideMemberList from "../src/compoenets/side-member-list/SideMemberList";
-import ProfileBar from "../src/compoenets/profile-bar/ProfileBar";
-import Header from "../src/compoenets/header/Header";
+import SideChannelList from "./components/side-channel-list/SideChannelList";
+import Message from "./components/message/Message";
+import SideMemberList from "./components/side-member-list/SideMemberList";
+import ProfileBar from "./components/profile-bar/ProfileBar";
+import Header from "./components/header/Header";
 
 // MainDiv: 전체 레이아웃을 감싸는 그리드 컨테이너
 const MainDiv = styled.div`
