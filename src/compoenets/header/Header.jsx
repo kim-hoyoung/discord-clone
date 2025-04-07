@@ -30,6 +30,10 @@ const ChannelName = styled.div`
   color: white;
   font-size: 18px;
   font-weight: bold;
+  min-width: 150px; /* 최소 너비 설정 (필요에 따라 조정) */
+  white-space: nowrap; /* 길어질 경우 줄바꿈 방지 */
+  overflow: hidden; /* 길어질 경우 잘리도록 설정 */
+  text-overflow: ellipsis; /* 잘린 부분을 ...으로 표시 */
 `;
 
 const Toolbar = styled.div`

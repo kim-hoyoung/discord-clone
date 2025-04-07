@@ -14,14 +14,14 @@ const MainDiv = styled.div`
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 250px auto 250px; /* 사이드바, 메인 콘텐츠, 사용자 목록 */
+  grid-template-columns: 250px 1fr 250px; /* 사이드바, 메인 콘텐츠, 사용자 목록 */
   grid-template-rows: auto 1fr auto; /* 헤더, 콘텐츠, 하단 프로필 */
   grid-template-areas:
     "SideChannelList Header SideMemberList"
     "SideChannelList Message SideMemberList"
     "SideChannelList ProfileBar SideMemberList";
+  overflow: hidden; /* 필요 시 추가 */
 `;
-
 // 사이드 채널 목록
 const SideChannelArea = styled.div`
   grid-area: SideChannelList;
@@ -35,12 +35,16 @@ const MainContent = styled.div`
   flex-direction: column;
   overflow: hidden;
   height: 100%;
+  width: 100%;
+  position: relative;
 `;
 
 // 사이드 멤버 목록
 const SideMemberArea = styled.div`
   grid-area: SideMemberList;
   background-color: var(--memberList-bg-color);
+  height: 100%;
+  overflow-y: auto; /* 스크롤이 필요할 경우 활성화 */
 `;
 
 // 헤더 영역
