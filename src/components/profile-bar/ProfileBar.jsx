@@ -79,7 +79,7 @@ export default function ProfileBar() {
     <MainDiv>
       <ProfileInfo>
         <ProfileIcon>
-          <img src="../public/images/discord-ProfileBar.png" alt="Profile" />
+          <img src="/images/discord-ProfileBar.png" alt="Profile" />
           <StatusIcon />
         </ProfileIcon>
         <ProfileName>
