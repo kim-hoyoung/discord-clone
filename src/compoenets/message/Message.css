@@ -3,21 +3,82 @@
   flex-direction: column;
   background-color: var(--message-bg-color);
   height: 95.8vh;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .messagesList {
   height: 92%;
   overflow-y: auto;
+  width: 100%;
 }
 
+/* 스크롤바 스타일 커스텀 */
+.messagesList::-webkit-scrollbar {
+  width: 12px; /* 스크롤바 너비 */
+}
+
+.messagesList::-webkit-scrollbar-thumb {
+  background-color: #888; /* 스크롤바 색상 */
+  border-radius: 6px; /* 둥근 모양으로 변경 */
+  border: 2px solid var(--message-bg-color); /* 배경과 일치시켜 깔끔하게 */
+}
+
+.messagesList::-webkit-scrollbar-track {
+  background-color: var(--message-bg-color); /* 스크롤바 배경 */
+  border-radius: 6px;
+}
+/* 메시지 컨테이너 */
 .message {
   display: flex;
-  margin: 25px 15px 25px 15px;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  margin: 10px 15px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  position: relative;
+}
+/* 호버 효과 */
+.message:hover {
+  background-color: #40444b;
 }
 
+/* 메시지 내용 컨테이너 */
 .messageData {
   display: flex;
   flex-direction: column;
+  max-width: 80%; /* 메시지 내용을 왼쪽으로 고정시키기 위해 제한 */
+}
+
+/* 아이콘 박스 스타일 */
+.messageIcons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: #50555d; /* 배경 색상 */
+  border-radius: 5px;
+  position: absolute;
+  right: 0px;
+  top: 10%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+/* 호버 시 아이콘 표시 */
+.message:hover .messageIcons {
+  opacity: 1;
+}
+/* NEW 라벨 스타일 */
+.newLabel {
+  background-color: #5865f2; /* Discord 스타일의 파란색 */
+  color: white;
+  font-size: 10px;
+  padding: 1px 4px;
+  border-radius: 4px;
+  margin-left: 5px;
 }
 
 .name,

@@ -22,7 +22,7 @@ const MainContent = styled.div`
   width: 100%;
   height: 100%;
   grid-template-columns: 250px 1fr 250px; /* 사이드바, 메인, 사용자 목록 */
-  column-gap: 60px; /* 열 간격 추가 (채팅창을 오른쪽으로 밀기 위해) */
+  column-gap: 0px; /* 열 간격 추가 (채팅창을 오른쪽으로 밀기 위해) */
   box-sizing: border-box;
 `;
 

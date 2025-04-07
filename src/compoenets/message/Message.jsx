@@ -1,4 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
+import {
+  FaThumbsUp,
+  FaCheck,
+  FaHands,
+  FaSmile,
+  FaRedoAlt,
+  FaEllipsisH,
+} from "react-icons/fa";
 import { createClient } from "@supabase/supabase-js";
 import "./Message.css";
 
@@ -91,6 +99,15 @@ export default function Message() {
                   </p>
                 </div>
                 <p className="text">{msg.message}</p>
+              </div>
+              {/* 아이콘들 */}
+              <div className="messageIcons">
+                <FaThumbsUp color="#f5c542" />
+                <FaCheck color="#43b581" />
+                <FaHands color="#7289da" />
+                <FaSmile color="#ffcc4d" />
+                <FaRedoAlt color="#ffffff" />
+                <FaEllipsisH color="#ffffff" />
               </div>
             </div>
           </div>
